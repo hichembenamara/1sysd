@@ -1,19 +1,19 @@
-.PHONY: all clean 
+.PHONY: all clean
 
-PROGS=Chainlist
+# Compléter la ligne ci-dessous avec les noms des
+# programme à compiler 
+PROGS=hist paths
 CC=gcc
 CFLAGS=
-LDFLAGS=
+LDFLAGS=-lm
 
 all: $(PROGS)
 
-%: .%c
+%: %.c
 	$(CC) $(CFLAGS) -o $@ $< $(LDFLAGS)
 
-%.S: %.c 
-	$(CC) -S $<
+%.s: %.c
+	$(CC) -S $< 
 
 clean:
-	rm -f $(PROGS) *.S *.O
-	
-
+	rm -f $(PROGS) *.s *.o
