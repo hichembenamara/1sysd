@@ -2,7 +2,7 @@
 
 # Compléter la ligne ci-dessous avec les noms des
 # programme à compiler 
-PROGS=hist paths
+PROGS= circle factorial invertcase
 CC=gcc
 CFLAGS=
 LDFLAGS=-lm
